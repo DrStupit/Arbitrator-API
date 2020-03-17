@@ -30,13 +30,13 @@ namespace couchbase_rest_api.Services
         public UserService(IOptions<AppSettings> appSettings)
         {
             _appSettings = appSettings.Value;
-            _bucket = ClusterHelper.GetBucket("users");
+            _bucket = ClusterHelper.GetBucket("lawyermanagementdb");
         }
 
         public void GetAllUsers()
         {
             var n1ql = @"SELECT u.*, META(u).id
-                FROM users u
+                FROM lawyermanagementdb u
                 WHERE u.type = 'User';";
             var query = QueryRequest.Create(n1ql);
             query.ScanConsistency(ScanConsistency.RequestPlus);

@@ -22,7 +22,7 @@ namespace couchbase_rest_api.Controllers
 
         public UserController(IUserService userService)
         {
-            _bucket = ClusterHelper.GetBucket("users");
+            _bucket = ClusterHelper.GetBucket("lawyermanagementdb");
             _userService = userService;
         }
         [HttpGet]
