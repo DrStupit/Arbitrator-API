@@ -40,7 +40,6 @@ namespace couchbase_rest_api.Controllers
             return Ok(councils);
         }
 
-
         [HttpPost]
         [Route("AddNewCouncil")]
         public IActionResult AddNewCouncil([FromBody] Council council)

@@ -70,6 +70,7 @@ namespace couchbase_rest_api
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICouncilService, CouncilService>();
+            services.AddScoped<IBookingService, BookingService>();
 
 
             services.AddSwaggerGen(c =>
